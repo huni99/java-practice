@@ -18,14 +18,27 @@ public class b10250 {
     H=Integer.parseInt(st.nextToken());
     W=Integer.parseInt(st.nextToken());
     N=Integer.parseInt(st.nextToken());
+  
+    if(N%H==0){
+      str = ""+H;
+      if(N/H<10){
+        str+="0"+N/H;
+      }else{
+        str+=N/H;
+      }
 
-    str= String.valueOf(N%H);
-    if(N/H<9){
-      str+="0"+(N/H+1);
-
-    }else{
-      str+=N/H+1;
     }
+    else{
+      str=""+N%H;
+      if(N/H<9){
+        str+="0"+(N/H+1);
+      }else{
+        str+=(N/H+1);
+      }
+      
+
+    }
+
     sb.append(str).append("\n");
     }
     System.out.println(sb);
